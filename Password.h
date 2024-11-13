@@ -21,5 +21,13 @@ public:
   letter and at least one lower-case letter
   */
   bool has_mixed_case(string);
+	bool one_up = false;
+	bool one_down = false;
+	for (int i = 0; i < string.length() - 1; i++){
+		if(string[i] >= 65 || string[i] <= 90) one_up = true;
+		else if(string[i] >=97 && string[i] <= 122) one_down = true;
+	}
+	if(one_up == true && one_down == true) return true;
+	else false;
 };
 #endif
